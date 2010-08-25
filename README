@@ -11,7 +11,8 @@ comes in.
 
 == Get your oAuth keys to make this work! == 
 
-Simply put it on your server, get a consumer key and secret from developer.yahoo.com and edit the keys.php file copying your key in. 
+Simply put it on your server, get a consumer key and secret from 
+developer.yahoo.com and edit the keys.php file copying your key in. 
 
 When an end user access the search interface they'll be asked to give it 
 access to their Yahoo account and off they go. 
