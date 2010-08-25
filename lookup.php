@@ -24,8 +24,12 @@ if(isset($_POST['sent']) || isset($_POST['moar'])){
 
     echo '<h2><span>3</span> Your search results</h2>';
     echo '<ul id="results">';
-    foreach($data->query->results->update as $u){
-      echo render($u);
+    if(sizeof($data->query->results->update) == 1){
+     echo render($data->query->results->update); 
+    } else {
+      foreach($data->query->results->update as $u){
+        echo render($u);
+      }
     }
     echo '</ul>';
     $offset += $howmany;

@@ -11,10 +11,10 @@
 function render($u){
   echo "<!-- $u->source -->";
   $when = date(DATE_RFC822,$u->lastUpdated);
-  if($u->title == ''){
+  if($u->title == '' && $u->loc_longForm){
     $u->title = $u->loc_longForm;
   }
-  if($u->title != '' && $u->description == ''){
+  if($u->title != '' && $u->description == '' && $u->loc_longForm){
     $u->description = $u->loc_longForm;
   }
   switch ($u->source){
