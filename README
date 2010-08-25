@@ -1,0 +1,50 @@
+== Yahoo! Firehose research interface == 
+
+Yahoo! provides an aggregated, real-time feed of updates of all the social
+activity on the Yahoo! network and from lots of third party social networks 
+(before you wonder, Facebook is not in there for now). 
+
+The feed is available via YQL as the social.updates.search table and you 
+can use the console to use it. However that is not easy for people who 
+are not used to reading XML, JSON or write SQL. This is where this interface
+comes in. 
+
+== Get your oAuth keys to make this work! == 
+
+Simply put it on your server, get a consumer key and secret from developer.yahoo.com and edit the keys.php file copying your key in. 
+
+When an end user access the search interface they'll be asked to give it 
+access to their Yahoo account and off they go. 
+
+The interface uses the YOS PHP SDK for oAuth authentication and needs a server
+that has PHP5 and cURL running. 
+
+== Changing the interface / files == 
+
+The interface consists of the following files:
+
+index.php          - the main index HTML file with the inline JavaScript to
+                     provide the design of the social sources and retain the
+                     last search state.
+                     when the user comes back.
+keys.php           - the file containing the consumer key and secret for
+                     authentication
+filter.php         - filtering out incoming data and setting some of the 
+                     used variables.
+firehosesearch.css - All the CSS styles. There are no graphics involved in the 
+                     interface as it is.
+lookup.php         - The module that accesses YQL to get the information and 
+                     renders out the list of results or error messages.
+options.php        - Renders the option list of which social networks to 
+                     search in. 
+renderers.php      - The main render() function that shows the HTML of all the 
+                     different social updates. It is actually one massive 
+                     switch statement. If you need to add special renderings 
+                     for different social sources (I'm thinking of embedding 
+                     video) then here's where to do so.
+sources.php        - The social update sources. This is a static JSON object 
+                     as originally I wanted to add a autocomplete for sources.
+                     You can also uncomment the YQL call in case there is an 
+                     update to the sources in the future to re-generate the 
+                     object.
+
