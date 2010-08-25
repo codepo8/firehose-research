@@ -1,0 +1,36 @@
+#sources{overflow:hidden;width:100%;margin:0 0 0 5px;}
+#sources li{float:left;width:9em;padding:5px 0;position:relative;list-style:none;background:#ccc;margin:0 0 5px 5px;-moz-border-radius:5px;-webkit-border-radius:5px;font-weight:bold;}
+#sources li.on{background:#369;color:#fff;}
+/*
+  Yahoo Firehose research interface
+  Styles
+  Homepage: http://github.com/codepo8/firehose-research
+  Copyright (c)2010 Christian Heilmann
+  Code licensed under the BSD License:
+  http://wait-till-i.com/license.txt
+*/
+#sources li.on:hover,#sources li.on:focus{background:#036;color:#fff;}
+#sources li:hover,#sources li:focus{background:#666;color:#fff;cursor:pointer;}
+#sources li:hover label{cursor:pointer;}
+#sources input{position:absolute;left:0;}
+.yui3-js-enabled #sources input{position:absolute;left:-9999px;}
+#sources label{padding-left:1em;display:block;}
+.bar{font-size:120%;padding-left:60px;margin:20px 0;font-weight:bold;}
+.bar label{padding-right:1em;}
+.bar input{margin-right:1em;}
+h2{margin-bottom:10px;line-height:50px;background:#6c3;-moz-border-radius:5px;-webkit-border-radius:5px;margin-left:25px;}
+h2 span{display:block;float:left;width:50px;height:50px;text-align:center;-moz-border-radius:50px;-webkit-border-radius:50px;background:#390;font-size:180%;line-height:50px;margin:0 10px 0 -25px;}
+#results{margin:0 10px;padding:0}
+#results li{list-style:none;padding:0;margin:0 0 1em 0;position:relative;background:#ddd;overflow:hidden;-moz-border-radius:5px;-webkit-border-radius:5px;padding:10px 10px 20px 10px;}
+#results .person{float:left;width:100px;text-align:center;}
+#results .person span{display:block;width:100px;overflow:hidden;color:#000;}
+#results .content{float:right;width:600px;}
+#results h3{margin:0 0 5px 0;padding:0;}
+#results h3 a{color:#030;}
+#results p.via{text-align:right;font-size:80%;color:#666;position:absolute;bottom:0;right:10px;}
+p.pages{text-align:right;font-size:90%;color:#333;margin:10px 20px;}
+#results li:hover{background:#9cf;}
+h1{font-size:300%;margin:10px auto;text-align:center;font-family:calibri,arial;color:#000;letter-spacing:-2px;text-transform:uppercase;}
+div.more{padding:1em;background:#6c3;-moz-border-radius:5px;-webkit-border-radius:5px;text-align:right;}
+p.message{font-size:120%;padding-left:30px;color:#666;}
+#ft p{margin:1em;font-size:80%;color:#999;text-align:right;}
