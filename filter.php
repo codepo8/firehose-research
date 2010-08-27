@@ -7,6 +7,13 @@
   Code licensed under the BSD License:
   http://wait-till-i.com/license.txt
 */
+  include_once('keys.php');
+  require_once('lib/OAuth/OAuth.php');
+  require_once('lib/Yahoo/YahooOAuthApplication.class.php');
+  $oauthapp = new YahooOAuthApplication($CONSUMER_KEY, $CONSUMER_SECRET, '');
+  include_once('sources.php');
+  include_once('renderers.php');
+
   $offset = isset($_POST['offset']) ? $_POST['offset'] : 0;
   $args = array(
     'sent'   => FILTER_SANITIZE_SPECIAL_CHARS,

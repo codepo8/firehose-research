@@ -13,12 +13,13 @@ if(isset($_POST['sent']) || isset($_POST['moar'])){
     $offset = 0;
   }
   $howmany = 20;
+
   $firehose = 'select * from social.updates.search('.$offset.','.$howmany.
               ') where query="'.$_POST['s'].'" and source in '.
               ' ("'.join('","',$_POST['sources']).'")';
   echo "<!-- $firehose -->";
 
-  $data = $yahoo_session->query($firehose);
+  $data = $oauthapp->yql($firehose);
 
   if($data->query->results !== null){
 

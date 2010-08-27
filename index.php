@@ -6,18 +6,7 @@
   Code licensed under the BSD License:
   http://wait-till-i.com/license.txt
 */
-  include_once('keys.php');
-  include_once('lib/Yahoo.inc');
-  YahooLogger::setDebug(true);
-  $yahoo_session = YahooSession::requireSession(
-    CONSUMER_KEY, CONSUMER_SECRET
-  );
-  if ($yahoo_session == NULL) {
-    die('Session error :(');
-  }
   include_once('filter.php');
-  include_once('sources.php');
-  include_once('renderers.php');
 ?> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>

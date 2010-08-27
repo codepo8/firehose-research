@@ -9,7 +9,6 @@
 */
 
 // Get your own key and secret at http://developer.yahoo.com
-define('CONSUMER_KEY', '');
-define('CONSUMER_SECRET','');
-
+$CONSUMER_KEY =  '';
+$CONSUMER_SECRET = '';
 ?>
